@@ -17,8 +17,8 @@ phases:
        - npm install mochawesome@7.1.3
        - npm install selenium@2.20.0
        - npm install webdriver@8.27.0
-       - sh install_driver.sh
-       - npm install chromedriver 
+       
+       - npm install chromedriver --chromedriver_version=LATEST 
        
       
       
