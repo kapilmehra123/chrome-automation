@@ -9,17 +9,15 @@ phases:
 
   pre_build:
     commands:
-      # Set up Selenium WebDriver (assuming WebDriver is already installed)
-      - webdriver-manager update --versions.standalone=4.0.0 --gecko=false --quiet
-      # Start Selenium server in background
-      - nohup webdriver-manager start --versions.standalone=4.0.0 --gecko=false > /dev/null 2>&1 &
-      # Wait for Selenium server to start
+      # Start Chromedriver in background
+      - chromedriver --url-base=/wd/hub --port=4444 > /dev/null 2>&1 &
+      # Wait for Chromedriver to start
       - sleep 5
       # Additional pre-build commands if needed
 
   build:
     commands:
-      # Run Selenium tests
+      # Run Mocha tests with Mochawesome reporter
       - npm test
 
   post_build:
