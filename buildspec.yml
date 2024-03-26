@@ -5,27 +5,31 @@ phases:
     runtime-versions:
       nodejs: 20
     commands:
-      - npm install  # Install project dependencies
+      # Install necessary dependencies
+      - sudo apt-get update
+      - sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4
       # Download and install Chrome
       - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
       - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
       - sudo apt-get update && sudo apt-get install -y google-chrome-stable
-      # Install Chromedriver
-      - wget -N https://chromedriver.storage.googleapis.com/$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
-      - unzip chromedriver_linux64.zip
-      - chmod +x chromedriver
-      - sudo mv -f chromedriver /usr/local/bin/chromedriver
 
   pre_build:
+    commands:
+      # Download and install Chromedriver
+      - wget -O chromedriver.zip https://chromedriver.storage.googleapis.com/$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
+      - unzip chromedriver.zip
+      - sudo mv chromedriver /usr/local/bin/chromedriver
+      - sudo chmod +x /usr/local/bin/chromedriver
+      # Start Xvfb (virtual framebuffer) to simulate a display
+      - Xvfb :99 -ac -screen 0 1280x1024x16 > /dev/null 2>&1 &
+      - export DISPLAY=:99
+
+  build:
     commands:
       # Start Chromedriver in headless mode
       - chromedriver --url-base=/wd/hub --port=4444 --headless --no-sandbox > /dev/null 2>&1 &
       # Wait for Chromedriver to start
       - sleep 5
-      # Additional pre-build commands if needed
-
-  build:
-    commands:
       # Run Mocha tests with Mochawesome reporter
       - npm test
 
