@@ -21,6 +21,6 @@ phases:
       
       
        
-  build:
+  pre_build:
     commands:
-       - node --experimental-specifier-resolution=node index.js
+       - npm test
