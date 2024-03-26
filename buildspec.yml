@@ -6,8 +6,6 @@ phases:
       - npm install
 
       - yarn install
-
-      - pnpm install
       
       
        
