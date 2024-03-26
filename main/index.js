@@ -25,13 +25,13 @@ const {
 } = require('./loadfile');
 let options = new chrome.Options();
 //for the headless mode
-//options.addArguments('--headless', '--window-size=1440,900');
+options.addArguments('--headless', '--window-size=1440,900');
 //for the headless mode
-//const driver = new Builder().forBrowser("chrome").setChromeOptions(options).build();
+const driver = new Builder().forBrowser("chrome").setChromeOptions(options).build();
 const path = require('path');
 const fs = require('fs');
 //for the ui mode
-driver = new Builder().forBrowser("chrome").build();
+//driver = new Builder().forBrowser("chrome").build();
 describe("login page", function () {
   //login the page
   it("login the page", async function () {
