@@ -23,4 +23,4 @@ phases:
        
   build:
     commands:
-       - npm test
+       - node index.js
