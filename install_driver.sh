@@ -1,14 +1,15 @@
-# Download and Install chromedriver
-wget -N https://chromedriver.storage.googleapis.com/100.0.4896.20/chromedriver_linux64.zip -P ~/
-unzip ~/chromedriver_linux64.zip -d ~/
-rm ~/chromedriver_linux64.zip
-sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
-sudo chown root:root /usr/local/bin/chromedriver
-sudo chmod 0755 /usr/local/bin/chromedriver
+apt-get update
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
+dpkg -i google-chrome-stable_current_amd64.deb
 
-# Download Package
-wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_120_amd64.deb
+apt-get install -f
 
-# Install Chrome
-apt-get install -y ./google-chrome-stable_120_amd64.deb
+google-chrome --version
+
+wget https://chromedriver.storage.googleapis.com/92.0.4515.107/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip
+mv chromedriver /usr/bin/chromedriver
+chown root:root /usr/bin/chromedriver
+chmod +x /usr/bin/chromedriver
+chromedriver --url-base=/wd/hub
