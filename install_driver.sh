@@ -8,6 +8,8 @@ sudo chmod 0755 /usr/local/bin/chromedriver
 
 
 # Install chrome broswer
-sudo apt-get install libxss1 libappindicator1 libindicator7 -y 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome*.deb -y 
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-get update 
+sudo apt-get install google-chrome-stable 
+
