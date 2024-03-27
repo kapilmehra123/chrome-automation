@@ -1,24 +1,22 @@
 version: 0.2
-
-
 phases:
   install:
+    runtime-versions:
+      nodejs: 16
     commands:
-       - apt-get install curl
-       - curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - &&\
-       - apt-get install nodejs
-       
-       - sh install_driver.sh      
-       - npm install -g webdriver-manager
-       - webdriver-manager update
-       - npm install selenium-webdriver@4.16.0
-      
-       - npm install mocha@10.2.0
-       - npm install mochawesome@7.1.3
-       - npm install selenium@2.20.0
-       - npm install webdriver@8.27.0
-            
+      - echo Installing
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies.
+      - npm install
   build:
     commands:
-       - npm test
-      
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - npm run build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
