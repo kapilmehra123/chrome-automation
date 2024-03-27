@@ -1,9 +1,10 @@
 # Download and Install chromedriver
 wget https://chromedriver.storage.googleapis.com/123.0.6312.86/chromedriver_linux64.zip 
 unzip chromedriver_linux64.zip 
-sudo mv chromedriver /usr/bin/chromedriver 
-sudo chown root:root /usr/bin/chromedriver 
-sudo chmod +x /usr/bin/chromedriver 
+rm ~/chromedriver_linux64.zip
+sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
+sudo chown root:root /usr/local/bin/chromedriver
+sudo chmod 0755 /usr/local/bin/chromedriver
 
 
 # Install chrome broswer
