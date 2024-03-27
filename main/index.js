@@ -25,12 +25,18 @@ const {
 } = require('./loadfile');
 let options = new chrome.Options();
 //for the headless mode
+options.addArguments("start-maximized"); // open Browser in maximized mode
+    options.addArguments("disable-infobars"); // disabling infobars
+    options.addArguments("--disable-extensions"); // disabling extensions
+    options.addArguments("--disable-gpu"); // applicable to Windows os only
+    options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+    options.addArguments("--no-sandbox"); // Bypass OS security model
+    options.addArguments("--disable-in-process-stack-traces");
+    options.addArguments("--disable-logging");
+    options.addArguments("--log-level=3");
+    options.addArguments("--remote-allow-origins=*");
 
-options.addArguments("headless"); // headless -> no browser window. needed for jenkins
-options.addArguments("disable-infobars"); // disabling infobars
-options.addArguments("--disable-extensions"); // disabling extensions
-options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-options.addArguments("--no-sandbox"); // Bypass OS security model
+    browser = new ChromeDriver(options);
 
 //for the headless mode
 const driver = new Builder().forBrowser("chrome").setChromeOptions(options).build();
