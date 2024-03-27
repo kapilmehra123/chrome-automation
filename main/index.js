@@ -35,10 +35,8 @@ options.addArguments("start-maximized"); // open Browser in maximized mode
     options.addArguments("--disable-logging");
     options.addArguments("--log-level=3");
     options.addArguments("--remote-allow-origins=*");
-
-    browser = new ChromeDriver(options);
-
 //for the headless mode
+
 const driver = new Builder().forBrowser("chrome").setChromeOptions(options).build();
 const path = require('path');
 const fs = require('fs');
