@@ -9,7 +9,7 @@ phases:
        - apt-get install nodejs
        
        - sh install_driver.sh    
-       - npm install chromedriver --chromedriver-force-download
+       
        - npm install -g webdriver-manager
        - webdriver-manager update
        - npm install selenium-webdriver@4.16.0
