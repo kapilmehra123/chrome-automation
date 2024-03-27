@@ -32,8 +32,6 @@ options.addArguments("--disable-extensions"); // disabling extensions
 options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 options.addArguments("--no-sandbox"); // Bypass OS security model
 
-
-driver.get("www.google.com");
 //for the headless mode
 const driver = new Builder().forBrowser("chrome").setChromeOptions(options).build();
 const path = require('path');
