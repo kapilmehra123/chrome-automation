@@ -25,7 +25,7 @@ const {
 } = require('./loadfile');
 let options = new chrome.Options();
 //for the headless mode
-options.addArguments('--headless', '--window-size=1440,900');
+options.addArguments("--headless");
 //for the headless mode
 const driver = new Builder().forBrowser("chrome").setChromeOptions(options).build();
 const path = require('path');
