@@ -1,5 +1,5 @@
 
-Install-Package Selenium.WebDriver.ChromeDriver -Version 123.0.6312.86
+npm install chromedriver
 
 # Install chrome broswer
 curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
