@@ -4,9 +4,9 @@ phases:
   pre_build:
     commands:
       - npm install
-    
+      - sh install_driver.sh
   build:
     commands:
-    
+      - npm build
       - npm test
       
