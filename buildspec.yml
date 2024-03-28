@@ -12,6 +12,6 @@ phases:
 reports: 
   SurefireReports: 
     files: 
-      - '/codebuild/output/src3133932211/src/mochawesome-report/mochawesome.json'
-    base-directory: '/codebuild/output/src3133932211/src/mochawesome-report/'  
+      - 'mochawesome-report/mochawesome.json'
+    #base-directory: '/codebuild/output/src3133932211/src/mochawesome-report/'  
   
