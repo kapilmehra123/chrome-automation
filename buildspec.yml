@@ -23,9 +23,8 @@ phases:
     commands:
        - npm test
       
-reports:
-  my-report-group:
-    files:
-      - '**/*.xml'
-    base-directory: 'test-results'
-    discard-paths: yes
+reports: #New
+  SurefireReports: # CodeBuild will create a report group called "SurefireReports".
+    files: #Store all of the files
+      - '**/*'
+    base-directory: 'target/surefire-reports' # Location of the reports 
