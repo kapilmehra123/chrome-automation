@@ -8,10 +8,10 @@ phases:
   build:
     commands:
       - npm test
-
-reports: 
-  SurefireReports: 
-    files: 
-      - polymer/mochawesome-report/mochawesome.json
-    base-directory: 'polymer/mochawesome-report' 
+      
+reports: #New
+  SurefireReports: # CodeBuild will create a report group called "SurefireReports".
+    files: #Store all of the files
+      - '**/*'
+    base-directory: 'target/surefire-reports' # Location of the reports 
   
