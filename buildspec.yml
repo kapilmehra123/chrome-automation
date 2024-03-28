@@ -23,8 +23,8 @@ phases:
     commands:
        - npm test
       
-reports: #New
-  kapil: # CodeBuild will create a report group called "SurefireReports".
-    files: #Store all of the files
-      - '**/*'
-    base-directory: 'codepipeline-ap-south-1-365910100953' # Location of the reports 
+reports:
+  Selenium:
+    file-format: CucumberJson
+    files:
+      - target/json/output.json 
