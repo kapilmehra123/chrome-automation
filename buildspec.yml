@@ -8,5 +8,10 @@ phases:
   build:
     commands:
       - npm test
-      - mocha tests --reporter mochawesome --require mochawesome/register 
+
+reports: 
+  SurefireReports: 
+    files: 
+      - polymer/mochawesome-report/mochawesome.json
+    base-directory: 'polymer/mochawesome-report' 
   
