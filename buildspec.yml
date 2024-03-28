@@ -21,6 +21,8 @@ phases:
             
   build:
     commands:
+       - cd ./main/
        - npm build 
+       - cd ..
        - npm test
       
