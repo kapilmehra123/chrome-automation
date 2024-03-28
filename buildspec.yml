@@ -23,7 +23,9 @@ phases:
     commands:
        - npm test
       
-reports: #New
-  SurefireReports: # CodeBuild will create a report group called "SurefireReports".
-    files: #Store all of the files
-      - '**/*'
+reports:
+ java_reports:
+   files:
+     - java_reports.xml
+   base-directory: java_reports/
+   file-format: JUNITXML
