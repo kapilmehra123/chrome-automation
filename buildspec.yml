@@ -7,6 +7,5 @@ phases:
       - sh install_driver.sh
   build:
     commands:
-      - npm build
       - npm test
       
