@@ -13,5 +13,6 @@ reports:
   SurefireReports: 
     files: 
       - 'mochawesome-report/mochawesome.json'
+      - 'mochawesome-report/mochawesome.html'
     #base-directory: '/codebuild/output/src3133932211/src/mochawesome-report/'  
   
