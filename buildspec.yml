@@ -24,6 +24,6 @@ phases:
        - npm test
       
 reports:
-     kapil:
+     arn:aws:codebuild:ap-south-1:526201934328:report-group/kapil:
       files:
        - '**/*'
