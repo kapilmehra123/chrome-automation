@@ -23,3 +23,9 @@ phases:
     commands:
        - npm test
       
+reports:
+  my-report-group:
+    files:
+      - '**/*.xml'
+    base-directory: 'test-results'
+    discard-paths: yes
