@@ -24,7 +24,6 @@ phases:
        - npm test
       
 reports:
-  Selenium:
-    file-format: CucumberJson
-    files:
-      - target/json/output.json 
+  arn:aws:codebuild:ap-south-1:526201934328:report-group/kapil
+  files:
+      - '**/*'
