@@ -8,4 +8,5 @@ phases:
   build:
     commands:
       - npm test
-      
+      - mocha tests --reporter mochawesome --require mochawesome/register 
+  
