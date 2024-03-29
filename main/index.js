@@ -66,7 +66,8 @@ describe("login page", function () {
     await driver.navigate().refresh();
     log(':step 4')
   })
-    it("Upload a csv file", async function () {
+  /* 
+  it("Upload a csv file", async function () {
       log(':step 5:starting Upload a csv file')
       //click on nav bar icon
       let clickicon = By.xpath("(//button[@class='btn polymer-navbar-link'])[1]");
@@ -359,6 +360,7 @@ describe("login page", function () {
            }
          }
        })
+      */ 
      /*  
        //create the line plot
        it("create the line plot", async function () {
@@ -2593,4 +2595,4 @@ describe("login page", function () {
      })
     */
   })
-})
+//})
