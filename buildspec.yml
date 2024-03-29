@@ -11,6 +11,5 @@ phases:
 reports: 
   SurefireReports: 
     files: 
-      - 'mochawesome-report/mochawesome.json'
-      - 'mochawesome-report/mochawesome.html'
+      - 'mochawesome.json'
     
