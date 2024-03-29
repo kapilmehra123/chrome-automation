@@ -5,11 +5,9 @@ phases:
     commands:
       - npm install
       - sh install_driver.sh
-      - npm install -g mochawesome mochawesome-report-generator
   build:
     commands:
       - npm test
-      - mocha --no-timeouts 'main/index.js' --reporter mochawesome
 reports: 
   SurefireReports: 
     files: 
