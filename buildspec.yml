@@ -8,9 +8,9 @@ phases:
   build:
     commands:
       - npm test
-# reports: 
-#   SurefireReports: 
-#     files: 
-#       - 'mochawesome-report/mochawesome.json'
-#       - 'mochawesome-report/mochawesome.html'
+reports: 
+  SurefireReports: 
+    files: 
+      - 'mochawesome-report/mochawesome.json'
+      - 'mochawesome-report/mochawesome.html'
     
