@@ -25,11 +25,11 @@ const {
 } = require('./loadfile');
 let options = new chrome.Options();
 //for the headless mode
-// options.addArguments("headless"); // headless -> no browser window. needed for jenkins
-// options.addArguments("disable-infobars"); // disabling infobars
-// options.addArguments("--disable-extensions"); // disabling extensions
-// options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-// options.addArguments("--no-sandbox"); // Bypass OS security model
+options.addArguments("headless"); // headless -> no browser window. needed for jenkins
+options.addArguments("disable-infobars"); // disabling infobars
+options.addArguments("--disable-extensions"); // disabling extensions
+options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+options.addArguments("--no-sandbox"); // Bypass OS security model
 
 //for the headless mode
 
@@ -37,7 +37,7 @@ const driver = new Builder().forBrowser("chrome").setChromeOptions(options).buil
 const path = require('path');
 const fs = require('fs');
 //for the ui mode
-driver = new Builder().forBrowser("chrome").build();
+// driver = new Builder().forBrowser("chrome").build();
 describe("login page", function () {
   //login the page
   it("login the page", async function () {
