@@ -8,7 +8,9 @@ phases:
   build:
     commands:
       - npm test
-      - mocha surefire-report:report #Running this task to execute unit tests and generatesurefire-report:report #Running this task to execute unit tests and generate
+  post_build:
+    commands:
+      - mocha mochawesome-report:report #Running this task to execute unit tests and generatesurefire-report:report #Running this task to execute unit tests and generate
 reports: 
   SurefireReports: 
     files: 
