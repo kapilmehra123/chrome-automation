@@ -4,18 +4,13 @@ phases:
   pre_build:
     commands:
       - npm install
-      - npm install mocha 
       - sh install_driver.sh
   build:
     commands:
       - npm test
-  post_build:
-    commands:
-      - mocha mochawesome-report:report #Running this task to execute unit tests and generatesurefire-report:report #Running this task to execute unit tests and generate
 reports: 
   SurefireReports: 
     files: 
       - 'mochawesome-report/mochawesome.json'
       - 'mochawesome-report/mochawesome.html'
-    #base-directory: '/codebuild/output/src3133932211/src/mochawesome-report/'  
-  
+    
