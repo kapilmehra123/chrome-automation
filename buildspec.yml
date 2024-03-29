@@ -4,6 +4,7 @@ phases:
   pre_build:
     commands:
       - npm install
+      - npm install mocha 
       - sh install_driver.sh
   build:
     commands:
