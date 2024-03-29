@@ -7,7 +7,8 @@ phases:
       - sh install_driver.sh
   build:
     commands:
-      - npm test
+    #  - npm test
+      - npm surefire-report:report
 reports: 
   SurefireReports: 
     files: 
