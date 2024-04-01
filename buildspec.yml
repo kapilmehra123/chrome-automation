@@ -9,7 +9,7 @@ phases:
     commands:
       - npm test
 reports: 
-  SurefireReports: 
+  TestingReports: 
     files: 
       - '**/*'
       
