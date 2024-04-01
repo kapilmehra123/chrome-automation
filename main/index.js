@@ -66,7 +66,7 @@ describe("login page", function () {
     await driver.navigate().refresh();
     log(':step 4')
   })
-  /*
+  
   it("Upload a csv file", async function () {
       log(':step 5:starting Upload a csv file')
       //click on nav bar icon
@@ -360,7 +360,7 @@ describe("login page", function () {
            }
          }
        })
-      */
+      
      /*  
        //create the line plot
        it("create the line plot", async function () {
@@ -2595,4 +2595,4 @@ describe("login page", function () {
      })
     */
   })
-//})
+})
