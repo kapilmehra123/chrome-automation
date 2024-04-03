@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 5,
-    "start": "2024-04-02T09:20:36.649Z",
-    "end": "2024-04-02T09:22:19.380Z",
-    "duration": 102731,
+    "start": "2024-04-03T07:19:37.299Z",
+    "end": "2024-04-03T07:21:19.593Z",
+    "duration": 102294,
     "testsRegistered": 8,
     "passPercent": 37.5,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "75f0378d-6b59-4f22-8cc0-44e88155886d",
+      "uuid": "4fbad70c-7504-43f4-96ca-c25d8dca4556",
       "title": "",
       "fullFile": "/home/hp/APR-1/polymer/main/index.js",
       "file": "/main/index.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a9290178-6bf7-4f91-a589-10962ed3b703",
+          "uuid": "192ef255-f686-468d-9934-f10bd12c4143",
           "title": "login page",
           "fullFile": "/home/hp/APR-1/polymer/main/index.js",
           "file": "/main/index.js",
@@ -38,7 +38,7 @@
               "title": "login the page",
               "fullTitle": "login page login the page",
               "timedOut": false,
-              "duration": 9681,
+              "duration": 9099,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "log(':starting login the page')\nawait driver.manage().window().maximize();\nlog(':sstep 2')\nawait driver.get(baseUrl);\nlog(':step 3')\nlog(':step 3a')\nconst emailElementLocator = By.xpath(\"//input[@id='email']\");\n// maxRetries = 4\n// timeout = 30000ms\nawait actionWithRetry(driver, async function (element) {\n  await element.sendKeys(email);\n}, emailElementLocator, 4, 1000);\nconst passwordElementLocator = By.xpath(\"//input[@id='password']\");\nawait actionWithRetry(driver, async function (element) {\n  await element.sendKeys(pass);\n}, passwordElementLocator);\nconst loginButtonLocator = By.xpath(\"//button[@class='btn-md btn-black btn group/btn']\");\nawait actionWithRetry(driver, async function (element) {\n  await element.click();\n}, loginButtonLocator);\nawait driver.navigate().refresh();\nlog(':step 4')",
               "err": {},
-              "uuid": "dfef913f-84c0-4731-b1a5-1e0b839c9f41",
-              "parentUUID": "a9290178-6bf7-4f91-a589-10962ed3b703",
+              "uuid": "c661ebcb-5c43-447f-9c17-5fdd2d030c15",
+              "parentUUID": "192ef255-f686-468d-9934-f10bd12c4143",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Upload a csv file",
               "fullTitle": "login page Upload a csv file",
               "timedOut": false,
-              "duration": 9435,
+              "duration": 9558,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,8 +69,8 @@
                 "estack": "Error: Action failed after 4 attempts\n    at actionWithRetry (main/loadfile.js:51:11)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async Context.<anonymous> (main/index.js:74:7)",
                 "diff": null
               },
-              "uuid": "c0610e92-dec7-4871-8cf4-9d24fb53ae37",
-              "parentUUID": "a9290178-6bf7-4f91-a589-10962ed3b703",
+              "uuid": "fef61e69-d684-445b-8d1d-d51e3b25e689",
+              "parentUUID": "192ef255-f686-468d-9934-f10bd12c4143",
               "isHook": false,
               "skipped": false
             },
@@ -78,7 +78,7 @@
               "title": "Create time series",
               "fullTitle": "login page Create time series",
               "timedOut": false,
-              "duration": 16606,
+              "duration": 16768,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -91,8 +91,8 @@
                 "estack": "Error: Action failed after 4 attempts\n    at actionWithRetry (main/loadfile.js:51:11)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async Context.<anonymous> (main/index.js:166:7)",
                 "diff": null
               },
-              "uuid": "4a1d26c0-f18b-41b3-b831-ebcec808b625",
-              "parentUUID": "a9290178-6bf7-4f91-a589-10962ed3b703",
+              "uuid": "ac316839-fc8b-467b-8c00-f5ddc49d3537",
+              "parentUUID": "192ef255-f686-468d-9934-f10bd12c4143",
               "isHook": false,
               "skipped": false
             },
@@ -100,7 +100,7 @@
               "title": "traverse the graph",
               "fullTitle": "login page traverse the graph",
               "timedOut": false,
-              "duration": 4161,
+              "duration": 4127,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -109,8 +109,8 @@
               "context": null,
               "code": "log(':starting traverse the graph')\nconst chartelements = \"(//*[local-name()='svg']//*[name()='g' and @class='highcharts-markers highcharts-series-1 highcharts-line-series highcharts-tracker' ]//*)\"\nfor (let m = 2; m <= 32; m++) {\n  const elements = await driver.findElements(By.xpath(`${chartelements}[${m}]`));\n  await driver.actions().move({\n    origin: elements[0]\n  }).perform();\n}",
               "err": {},
-              "uuid": "1baa2c8c-3e75-451c-b89a-706846e84c71",
-              "parentUUID": "a9290178-6bf7-4f91-a589-10962ed3b703",
+              "uuid": "400d331d-03ae-4831-9aa3-613700b75b15",
+              "parentUUID": "192ef255-f686-468d-9934-f10bd12c4143",
               "isHook": false,
               "skipped": false
             },
@@ -118,7 +118,7 @@
               "title": "verify the timeseries data",
               "fullTitle": "login page verify the timeseries data",
               "timedOut": false,
-              "duration": 253,
+              "duration": 251,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -127,12 +127,12 @@
               "context": null,
               "code": "log(':starting verify the timeseries data')\nconst chartelements = \"(//*[local-name()='svg']//*[name()='g' and @class='highcharts-markers highcharts-series-1 highcharts-line-series highcharts-tracker' ]//*)\"\nlet text = \"//div[@class='inline-flex px-3 py-2 text-black flex-col drop-shadow-big font-normal']\"\nfor (let m = 2; m <= 32; m++) {\n  const elements = await driver.findElements(By.xpath(`${chartelements}[${m}]`));\n  await driver.actions().move({\n    origin: elements[0]\n  }).perform();\n  await driver.sleep(100);\n  let test = await driver.findElement(By.xpath(text)).getText();\n  //  let test = await driver.wait(until.elementIsVisible(driver.findElement(By.xpath(text))), isTimeout).getText();\n  console.log(\"testing\", test);\n  const extractedText = test.split('\\n')[0].trim();\n  console.log(\"Extracted text:\", extractedText);\n  const startIndex = test.indexOf(\"All Conv. Rate: \") + \"All Conv. Rate: \".length;;\n  const actual_conv_rate = test.substring(startIndex);\n  const actual_month_data = extractedText\n  console.log(\"actual_conv_rate\", actual_conv_rate)\n  for (let n = 0; n < item.time_series_chart[0].verification[0].month.length; n++) {\n    if (extractedText === item.time_series_chart[0].verification[0].month[n]) {\n      console.log(\"inside the loop\")\n      await driver.sleep(10);\n      //verify month,day,year\n      const expected_month_data = item.time_series_chart[0].verification[0].month[n]\n      assert.equal(expected_month_data, actual_month_data);\n      //verify the conv rate\n      const expected_conv_rate = item.time_series_chart[0].verification[0].all_conv_rate[n]\n      assert.equal(expected_conv_rate, actual_conv_rate);\n      // wait for 20ms before iterating next item\n      await driver.sleep(20);\n      break;\n    }\n  }\n}",
               "err": {
-                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class='inline-flex px-3 py-2 text-black flex-col drop-shadow-big font-normal']\"}\n  (Session info: chrome-headless-shell=121.0.6167.184)",
-                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class='inline-flex px-3 py-2 text-black flex-col drop-shadow-big font-normal']\"}\n  (Session info: chrome-headless-shell=121.0.6167.184)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:524:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:601:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:529:28)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:745:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:145:15)\n    at async /home/hp/APR-1/polymer/node_modules/selenium-webdriver/lib/webdriver.js:195:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:189:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:194:3)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:743:22)\n    at async Context.<anonymous> (main/index.js:225:23)",
+                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class='inline-flex px-3 py-2 text-black flex-col drop-shadow-big font-normal']\"}\n  (Session info: chrome=121.0.6167.184)",
+                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class='inline-flex px-3 py-2 text-black flex-col drop-shadow-big font-normal']\"}\n  (Session info: chrome=121.0.6167.184)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:524:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:601:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:529:28)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:745:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:145:15)\n    at async /home/hp/APR-1/polymer/node_modules/selenium-webdriver/lib/webdriver.js:195:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:189:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:194:3)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:743:22)\n    at async Context.<anonymous> (main/index.js:225:23)",
                 "diff": null
               },
-              "uuid": "37e49b0b-1aa8-40a9-9ebe-fd2687788e0a",
-              "parentUUID": "a9290178-6bf7-4f91-a589-10962ed3b703",
+              "uuid": "8eb197ec-8479-4d2a-95c6-486f865c38b9",
+              "parentUUID": "192ef255-f686-468d-9934-f10bd12c4143",
               "isHook": false,
               "skipped": false
             },
@@ -140,7 +140,7 @@
               "title": "create coloumn and bar chart",
               "fullTitle": "login page create coloumn and bar chart",
               "timedOut": false,
-              "duration": 60341,
+              "duration": 60352,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -153,8 +153,8 @@
                 "estack": "Error: Action failed after 3 attempts\n    at actionWithRetry (main/loadfile.js:51:11)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async Context.<anonymous> (main/index.js:256:10)",
                 "diff": null
               },
-              "uuid": "0d3b67a3-729a-4793-b55f-82ebb8d7a4c4",
-              "parentUUID": "a9290178-6bf7-4f91-a589-10962ed3b703",
+              "uuid": "7790bee8-b77b-4438-a0d1-a7c8c8111183",
+              "parentUUID": "192ef255-f686-468d-9934-f10bd12c4143",
               "isHook": false,
               "skipped": false
             },
@@ -162,7 +162,7 @@
               "title": "traverse the graph",
               "fullTitle": "login page traverse the graph",
               "timedOut": false,
-              "duration": 1986,
+              "duration": 1875,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -171,8 +171,8 @@
               "context": null,
               "code": "log(':starting traverse the graph of coloum and bar chart')\nconst chartelements = \"(//*[local-name()='svg']//*[name()='g' and @class='highcharts-series highcharts-series-0 highcharts-column-series highcharts-color-0 highcharts-tracker' ]//*)\"\nfor (let m = 1; m <= 14; m++) {\n  const elements = await driver.findElements(By.xpath(`${chartelements}[${m}]`));\n  await driver.actions().move({\n    origin: elements[0]\n  }).perform();\n}",
               "err": {},
-              "uuid": "23aa6d22-dcda-4fbf-8df4-8b6a10c367f6",
-              "parentUUID": "a9290178-6bf7-4f91-a589-10962ed3b703",
+              "uuid": "f1f0b8f1-c5af-4876-b0a1-d6833ac73199",
+              "parentUUID": "192ef255-f686-468d-9934-f10bd12c4143",
               "isHook": false,
               "skipped": false
             },
@@ -180,7 +180,7 @@
               "title": "verify the coloum and bar chart data",
               "fullTitle": "login page verify the coloum and bar chart data",
               "timedOut": false,
-              "duration": 256,
+              "duration": 252,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -189,32 +189,32 @@
               "context": null,
               "code": "log(':starting to verify the coloum and bar chart data')\nconst chartelements = \"(//*[local-name()='svg']//*[name()='g' and @class='highcharts-series highcharts-series-0 highcharts-column-series highcharts-color-0 highcharts-tracker' ]//*)\"\nlet text = \"(//div[@class='inline-flex px-3 py-2 text-black flex-col drop-shadow-big font-normal'])[2]\"\nfor (let m = 2; m <= 14; m++) {\n  const elements = await driver.findElements(By.xpath(`${chartelements}[${m}]`));\n  await driver.actions().move({\n    origin: elements[0]\n  }).perform();\n  await driver.sleep(100);\n  let test = await driver.findElement(By.xpath(text)).getText();\n  console.log(\"testing\", test)\n  const startCtrIndex = test.indexOf(\"Ctr: \") + \"Ctr: \".length;;\n  const actual_ctr_value = test.substring(startCtrIndex);\n  const startOperationIndex = test.indexOf(\"Operation: \") + \"Operation: \".length;\n  const endOperationIndex = test.indexOf(\"\\n\", startOperationIndex);\n  const actual_operation_name = test.substring(startOperationIndex, endOperationIndex).trim();\n  const startIndex = test.indexOf(\"Ad Name: \") + \"Ad Name: \".length;\n  const endIndex = test.indexOf(\"\\n\", startIndex);\n  const actual_ad_name = test.substring(startIndex, endIndex).trim();\n  console.log(\"actual_ad_name\", actual_ad_name)\n  for (let n = 0; n < item.coloum_and_bar_chart[0].verification[0].verify_adName.length; n++) {\n    if (actual_ad_name === item.coloum_and_bar_chart[0].verification[0].verify_adName[n]) {\n      console.log(\"inside the loop\")\n      await driver.sleep(10);\n      //verify ad name data\n      const expected_ad_name = item.coloum_and_bar_chart[0].verification[0].verify_adName[n]\n      assert.equal(expected_ad_name, actual_ad_name);\n      //verify the operation\n      const expected_operation_name = item.coloum_and_bar_chart[0].verification[0].verify_operation[n]\n      assert.equal(expected_operation_name, actual_operation_name);\n      //verify ctr\n      const expected_ctr_value = item.coloum_and_bar_chart[0].verification[0].verify_ctr[n]\n      assert.equal(expected_ctr_value, actual_ctr_value);\n      await driver.sleep(20);\n      break;\n    }\n  }\n}",
               "err": {
-                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"(//div[@class='inline-flex px-3 py-2 text-black flex-col drop-shadow-big font-normal'])[2]\"}\n  (Session info: chrome-headless-shell=121.0.6167.184)",
-                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"(//div[@class='inline-flex px-3 py-2 text-black flex-col drop-shadow-big font-normal'])[2]\"}\n  (Session info: chrome-headless-shell=121.0.6167.184)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:524:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:601:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:529:28)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:745:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:145:15)\n    at async /home/hp/APR-1/polymer/node_modules/selenium-webdriver/lib/webdriver.js:195:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:189:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:194:3)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:743:22)\n    at async Context.<anonymous> (main/index.js:332:23)",
+                "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"(//div[@class='inline-flex px-3 py-2 text-black flex-col drop-shadow-big font-normal'])[2]\"}\n  (Session info: chrome=121.0.6167.184)",
+                "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"(//div[@class='inline-flex px-3 py-2 text-black flex-col drop-shadow-big font-normal'])[2]\"}\n  (Session info: chrome=121.0.6167.184)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:524:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:601:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:529:28)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:745:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:145:15)\n    at async /home/hp/APR-1/polymer/node_modules/selenium-webdriver/lib/webdriver.js:195:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:189:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:194:3)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:743:22)\n    at async Context.<anonymous> (main/index.js:332:23)",
                 "diff": null
               },
-              "uuid": "733d7dbb-4d39-47a8-b26a-522636ef2b40",
-              "parentUUID": "a9290178-6bf7-4f91-a589-10962ed3b703",
+              "uuid": "30a569fc-ea6f-4a65-a48d-ad2916898c5b",
+              "parentUUID": "192ef255-f686-468d-9934-f10bd12c4143",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "dfef913f-84c0-4731-b1a5-1e0b839c9f41",
-            "1baa2c8c-3e75-451c-b89a-706846e84c71",
-            "23aa6d22-dcda-4fbf-8df4-8b6a10c367f6"
+            "c661ebcb-5c43-447f-9c17-5fdd2d030c15",
+            "400d331d-03ae-4831-9aa3-613700b75b15",
+            "f1f0b8f1-c5af-4876-b0a1-d6833ac73199"
           ],
           "failures": [
-            "c0610e92-dec7-4871-8cf4-9d24fb53ae37",
-            "4a1d26c0-f18b-41b3-b831-ebcec808b625",
-            "37e49b0b-1aa8-40a9-9ebe-fd2687788e0a",
-            "0d3b67a3-729a-4793-b55f-82ebb8d7a4c4",
-            "733d7dbb-4d39-47a8-b26a-522636ef2b40"
+            "fef61e69-d684-445b-8d1d-d51e3b25e689",
+            "ac316839-fc8b-467b-8c00-f5ddc49d3537",
+            "8eb197ec-8479-4d2a-95c6-486f865c38b9",
+            "7790bee8-b77b-4438-a0d1-a7c8c8111183",
+            "30a569fc-ea6f-4a65-a48d-ad2916898c5b"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 102719,
+          "duration": 102282,
           "root": false,
           "rootEmpty": false,
           "_timeout": 0
