@@ -7,4 +7,4 @@
 #!/bin/bash
 #yum install -y httpd
 
-sudo apt install nodejs
+sudo apt install nodejs -y
