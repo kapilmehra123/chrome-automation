@@ -5,4 +5,4 @@
 # apt-get -y install google-chrome-stable
 
 #!/bin/bash
-apt-get install -y httpd
+yum install -y httpd
