@@ -6,5 +6,5 @@
 
 #!/bin/bash
 #yum install -y httpd
-
+apt-get install npm -y
 npm test
