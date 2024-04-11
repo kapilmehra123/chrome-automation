@@ -7,4 +7,5 @@
 #!/bin/bash
 #yum install -y httpd
 cd /test
-#npm test || exit 1 
+npm i
+npm test || exit 1 
