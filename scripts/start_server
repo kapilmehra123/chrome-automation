@@ -10,5 +10,7 @@
 #npm test || exit 1
 whoami
 pwd
+cd /test
+pwd
 useradd himanshu
 
