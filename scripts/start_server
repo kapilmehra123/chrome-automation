@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 # service httpd start
 
 # npm test
@@ -17,7 +16,5 @@ export DISPLAY=:10.0
 echo "$DISPLAY"
 sudo chmod 777 /test/mochawesome-report
 npm test || exit 0
-sudo rm -rf /var/www/html/*
-sudo cp -r /test/* /var/www/html/
-useradd shubham
+
 

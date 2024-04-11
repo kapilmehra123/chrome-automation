@@ -11,6 +11,9 @@ hooks:
     - location: scripts/start_server
       timeout: 300
       runas: ubuntu
+    - location: scripts/html_report.sh
+      timeout: 300
+      runas: ubuntu
   # ApplicationStop:
   #   - location: scripts/stop_server
   #     timeout: 300
