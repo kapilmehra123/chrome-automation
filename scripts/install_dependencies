@@ -7,7 +7,7 @@
 #!/bin/bash
 #yum install -y httpd
 cd /test
-# npm i
+npm i
 # su - ubuntu
 # cd /test
 # npm test || exit 1
