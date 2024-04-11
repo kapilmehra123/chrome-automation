@@ -12,5 +12,5 @@ whoami
 pwd
 cd /test
 pwd
-useradd himanshu
+npm test
 
