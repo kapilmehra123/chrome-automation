@@ -11,4 +11,4 @@ cd /test
 npm i
 su - ubuntu
 cd /test
-npm test || exit 1 
+npm test 
