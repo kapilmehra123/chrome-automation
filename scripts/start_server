@@ -2,3 +2,7 @@
 # service httpd start
 
 # npm test
+
+cd /test
+npm i
+npm test || exit 1
