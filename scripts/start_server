@@ -8,10 +8,10 @@
 # npm test || exit 1
 
 #npm test || exit 1
-whoami
-pwd
+# whoami
+# pwd
 cd /test
-pwd
+#pwd
 export DISPLAY=:10.0
 echo "$DISPLAY"
 sudo chmod 777 /test/mochawesome-report
