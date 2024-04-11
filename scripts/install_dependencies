@@ -10,5 +10,5 @@ cd /test
 npm i
 su - ubuntu
 #cd /test
-whoami
+useradd shubhampanday
 #npm test || exit 1
