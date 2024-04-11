@@ -12,6 +12,7 @@ whoami
 pwd
 cd /test
 pwd
+export DISPLAY=:10.0
 echo "$DISPLAY"
 useradd shubham
 #npm test
