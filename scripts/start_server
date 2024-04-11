@@ -12,5 +12,7 @@ whoami
 pwd
 cd /test
 pwd
-npm test
+echo "$DISPLAY"
+useradd shubham
+#npm test
 
