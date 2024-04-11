@@ -10,5 +10,4 @@ cd /test
 npm i
 su - ubuntu
 #cd /test
-userdel shubhampanday
 #npm test || exit 1
