@@ -15,5 +15,5 @@ pwd
 export DISPLAY=:10.0
 echo "$DISPLAY"
 
-npm test
+npm test || exit 1
 
