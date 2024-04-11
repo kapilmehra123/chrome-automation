@@ -6,7 +6,7 @@
 
 #!/bin/bash
 #yum install -y httpd
-# cd /test
+cd /test
 # npm i
 # su - ubuntu
 # cd /test
